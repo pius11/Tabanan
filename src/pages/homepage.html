@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../assets/css/output.css" />
+
+    <title>Destinasi Tabanan</title>
+    <!-- Link CDN fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .bg-cover-custom {
+        background-image: url("../assets/img/home.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      id="navbar"
+      class="bg-white border-gray-200 bg-opacity-30 dark:bg-gray-900 dark:bg-opacity-30 fixed top-0 left-0 right-0 transition-colors duration-300 z-30"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="homepage.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img src="../assets/img/logo.png" class="h-8" alt="Tabanan Logo" />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          ></span>
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+          aria-haspopup="true"
+          id="menu-button"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover-scale"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#destinasi"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover-scale"
+                >Go Explore</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover-scale"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- Main Content -->
+    <div class="image-container" id="home">
+      <img
+        src="../assets/img/homepage.png"
+        alt="Homepage banner image"
+        class="w-full h-screen object-cover"
+      />
+    </div>
+
+    <div class="p-6" id="destinasi">
+      <h2 class="text-2xl font-bold mb-4">Destination Highlight</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="tanahLot.html">
+          <div class="relative">
+            <picture class="rounded-lg block overflow-hidden">
+              <img
+                src="../assets/img/tanah-lot.jpg"
+                alt="TANAH LOT"
+                class="object-cover w-full h-48 rounded-lg hover:scale-110 ease-in-out duration-75"
+              />
+            </picture>
+            <div
+              class="absolute bottom-0 left-0 w-full flex justify-center p-2 text-white font-bold bg-black bg-opacity-50 rounded shadow"
+            >
+              <span>TANAH LOT</span>
+            </div>
+          </div>
+        </a>
+        <a href="yehGangga.html">
+          <div class="relative">
+            <picture class="rounded-lg block overflow-hidden">
+              <img
+                src="../assets/img/yeh-gangga.jpg"
+                alt="YEH GANGGA"
+                class="object-cover w-full h-48 rounded-lg hover:scale-110 ease-in-out duration-75"
+              />
+            </picture>
+            <div
+              class="absolute bottom-0 left-0 w-full flex justify-center p-2 text-white font-bold bg-black bg-opacity-50 rounded shadow"
+            >
+              <span>YEH GANGGA</span>
+            </div>
+          </div>
+        </a>
+        <a href="kedunggu.html">
+          <div class="relative">
+            <picture class="rounded-lg block overflow-hidden">
+              <img
+                src="../assets/img/kedunggu.jpg"
+                alt="KEDUNGGU"
+                class="object-cover w-full h-48 rounded-lg hover:scale-110 ease-in-out duration-75"
+              />
+            </picture>
+            <div
+              class="absolute bottom-0 left-0 w-full flex justify-center p-2 text-white font-bold bg-black bg-opacity-50 rounded shadow"
+            >
+              <span>KEDUNGGU</span>
+            </div>
+          </div>
+        </a>
+        <a href="ulunDanuberatan.html">
+          <div class="relative">
+            <picture class="rounded-lg block overflow-hidden">
+              <img
+                src="../assets/img/ulun-danu.jpg"
+                alt="ULUN DANU"
+                class="object-cover w-full h-48 rounded-lg hover:scale-110 ease-in-out duration-75"
+              />
+            </picture>
+            <div
+              class="absolute bottom-0 left-0 w-full flex justify-center p-2 text-white font-bold bg-black bg-opacity-50 rounded shadow"
+            >
+              <span>ULUN DANU BERATAN</span>
+            </div>
+          </div>
+        </a>
+        <a href="jatiluwih.html">
+          <div class="relative">
+            <picture class="rounded-lg block overflow-hidden">
+              <img
+                src="../assets/img/jatiluwih.jpg"
+                alt="JATILUWIH"
+                class="object-cover w-full h-48 rounded-lg hover:scale-110 ease-in-out duration-75"
+              />
+            </picture>
+            <div
+              class="absolute bottom-0 left-0 w-full flex justify-center p-2 text-white font-bold bg-black bg-opacity-50 rounded shadow"
+            >
+              <span>JATILUWIH</span>
+            </div>
+          </div>
+        </a>
+        <a href="theBloomsgarden.html">
+          <div class="relative">
+            <picture class="rounded-lg block overflow-hidden">
+              <img
+                src="../assets/img/the-blooms-garden-bali.jpg"
+                alt="THE BLOOMS GARDEN"
+                class="object-cover w-full h-48 rounded-lg hover:scale-110 ease-in-out duration-75"
+              />
+            </picture>
+            <div
+              class="absolute bottom-0 left-0 w-full flex justify-center p-2 text-white font-bold bg-black bg-opacity-50 rounded shadow"
+            >
+              <span>THE BLOOMS GARDEN</span>
+            </div>
+          </div>
+        </a>
+        <a href="kebunRayabedugul.html">
+          <div class="relative">
+            <picture class="rounded-lg block overflow-hidden">
+              <img
+                src="../assets/img/kebun-raya-bedugul.jpg"
+                alt="KEBUN RAYA BEDUGUL"
+                class="object-cover w-full h-48 rounded-lg hover:scale-110 ease-in-out duration-75"
+              />
+            </picture>
+            <div
+              class="absolute bottom-0 left-0 w-full flex justify-center p-2 text-white font-bold bg-black bg-opacity-50 rounded shadow"
+            >
+              <span>KEBUN RAYA BEDUGUL</span>
+            </div>
+          </div>
+        </a>
+        <a href="viharaDharmagiri.html">
+          <div class="relative">
+            <picture class="rounded-lg block overflow-hidden">
+              <img
+                src="../assets/img/vihara-dharma-giri.jpg"
+                alt="VIHARA DHARMA GIRI"
+                class="object-cover w-full h-48 rounded-lg hover:scale-110 ease-in-out duration-75"
+              />
+            </picture>
+            <div
+              class="absolute bottom-0 left-0 w-full flex justify-center p-2 text-white font-bold bg-black bg-opacity-50 rounded shadow"
+            >
+              <span>VIHARA DHARMA GIRI</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- end main content -->
+
+    <!-- footer -->
+    <footer class="flex justify-between p-6 bg-white">
+      <div class="flex-auto pr-8">
+        <h2 class="text-xl font-semibold mb-2">Subscribe to our newsletter</h2>
+        <form class="flex flex-row">
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="p-2 border border-gray-300 rounded mb-2 md:w-full md:mr-2 h-10 flex-1"
+          />
+          <button
+            type="submit"
+            class="p-2 bg-purple-500 text-white rounded h-10 flex-none"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="flex-none w-52 px-4">
+        <h2 class="text-xl font-semibold mb-2">Contacts</h2>
+        <p>marketing@tabanan.com</p>
+        <p>+62 123 456 789</p>
+      </div>
+      <div class="flex-none w-52 px-4">
+        <h2 class="text-xl font-semibold mb-2">Socials</h2>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-800"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-gray-800"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-800"><i class="fab fa-xing"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script>
+      const navbar = document.getElementById("navbar");
+
+      const menuButton = document.getElementById("menu-button");
+      const navbarDefault = document.getElementById("navbar-default");
+
+      menuButton.addEventListener("click", () => {
+        navbarDefault.classList.toggle("hidden");
+      });
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          navbar.classList.add("scroll-navbar");
+          navbar.classList.remove("bg-opacity-30");
+          navbar.classList.remove("dark:bg-opacity-30");
+        } else {
+          navbar.classList.remove("scroll-navbar");
+          navbar.classList.add("bg-opacity-30");
+          navbar.classList.add("dark:bg-opacity-30");
+        }
+      });
+    </script>
+  </body>
+</html>

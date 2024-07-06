@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE BLOOMS GARDEN</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .map-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      }
+      .map-responsive {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- main content -->
+    <div class="px-4 pt-20 pb-4 w-full bg-gray-50">
+      <div class="w-full bg-white p-8 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold text-center mb-8">THE BLOOMS GARDEN</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
+          <div class="md:col-span-2 flex justify-center">
+            <img
+              src="../assets/img/the-blooms-garden-bali.jpg"
+              alt="THE BLOOMS GARDEN"
+              class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+          <div class="md:col-span-3 flex items-start">
+            <p class="text-lg mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              in rhoncus mi, ac lobortis felis. Morbi nec lacus elementum,
+              dapibus libero ut, sagittis neque. Duis quis pulvinar massa, a
+              tristique urna. Donec tincidunt tempus ex et laoreet. Vestibulum
+              congue id justo vel imperdiet. Ut tristique tincidunt vulputate.
+              Pellentesque dignissim mattis dolor, sed dignissim tellus accumsan
+              vel. Donec diam mauris, efficitur at faucibus nec, pellentesque a
+              nisi.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div class="md:col-span-3 flex items-start">
+            <p class="text-lg mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              in rhoncus mi, ac lobortis felis. Morbi nec lacus elementum,
+              dapibus libero ut, sagittis neque. Duis quis pulvinar massa, a
+              tristique urna. Donec tincidunt tempus ex et laoreet. Vestibulum
+              congue id justo vel imperdiet. Ut tristique tincidunt vulputate.
+              Pellentesque dignissim mattis dolor, sed dignissim tellus accumsan
+              vel. Donec diam mauris, efficitur at faucibus nec, pellentesque a
+              nisi.
+            </p>
+          </div>
+          <div class="md:col-span-2 flex justify-center">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.0071149151304!2d115.15619857369425!3d-8.302089483519673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd189a0ee3f1fa5%3A0x86e5ba65deb4531e!2sThe%20Blooms%20Garden!5e0!3m2!1sen!2sid!4v1720189285891!5m2!1sen!2sid"
+                class="map-responsive"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end main content -->
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script>
+      // Function to load HTML content into a div
+      function loadHTML(id, url) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(id).innerHTML = data;
+
+            if(id === 'navbar-container') {
+              const navbar = document.getElementById('navbar');
+              const menuButton = document.getElementById('menu-button');
+              const navbarDefault = document.getElementById('navbar-default');
+
+              menuButton.addEventListener('click', () => {
+                navbarDefault.classList.toggle('hidden');
+              })
+              window.addEventListener('scroll', () => {
+                if(window.scrollY > 50) {
+                  navbar.classList.add('scroll-navbar');
+                  navbar.classList.remove('bg-opacity-30');
+                  navbar.classList.remove('dark:bg-opacity-30');
+                } else {
+                  navbar.classList.remove('scroll-navbar');
+                  navbar.classList.add('bg-opacity-30');
+                  navbar.classList.add('dark:bg-opacity-30');
+              }
+              });
+            }
+            
+          })
+          .catch((error) => console.error("Error loading HTML:", error));
+      }
+
+      // Load the navbar and footer
+      loadHTML("navbar-container", "../component/navbar.html");
+      loadHTML("footer", "../component/footer.html");
+    </script>
+  </body>
+</html>

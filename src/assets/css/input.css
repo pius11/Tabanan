@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .hover-scale {
+      @apply hover:scale-[0.95] ease-in-out
+    }
+  }
+
+@layer components{
+  .bg-cover-custom{}
+}
